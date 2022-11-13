@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>ARP spoffing</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="css/slike/hacking_ozadje.jpg" data-background-opacity="0.5">
+                    <h2>ARP spoffing</h2>
+                    <p>
+                            Avtor: Nejc Kraševec<br>
+                            Razred: R3D<br>
+                            Mentorica: prof. Tanja Kocjan<br>
+                            Šolsko leto: 2022-2023
+                    </p>
+                </section>
+				<section data-background-image="css/slike/hacking_ozadje.jpg" data-background-opacity="0.5">
+                    <h3>Kaj bom predstavil</h3>
+					<p>
+						<ul>
+							<li><a href="#/2" style="color: #ffff;">Kaj je ARP</a></li>
+							<li><a href="#/3" style="color: #ffff;">Kako deluje ARP</a></li>
+							<li><a href="#/3/1" style="color: #ffff;">Delovanje ARPa (slika)</a></li>
+							<li><a href="#/4" style="color: #ffff;">Kako deluje ARP napad</a></li>
+							<li><a href="#/4/1" style="color: #ffff;">Delovanje ARP napad (slika)</a></li>
+							<li><a href="#/5" style="color: #ffff;">A legend</a></li>
+							<li><a href="#/6" style="color: #ffff;">Ghosts</a></li>
+							<li><a href="#/7" style="color: #ffff;">Why then the Tower of London is so popular with tourists</a></li>
+						</ul>
+					</p>
+				</section>
+                <section data-background-image="css/slike/hacking_ozadje.jpg" data-background-opacity="0.5">
+					<h3>Kaj je ARP</h3>
+					<p>
+						<ul>
+							<li>Address Resolution Protocol</li>
+							<li>Protokol za prepoznavanje naslovov</li>
+							<li>IP --> MAC </li>
+
+						</ul>
+					</p>
+				</section>
+				<section data-background-image="css/slike/hacking_ozadje.jpg" data-background-opacity="0.5">
+					<section>
+						<h3>Kako deluje ARP</h3>
+						<p>
+							<ol>
+								<li>Naprava odda (brodcasta) APR zahtevo vsem napravam v omrežju</li>
+								<li>Vsaka naprava preveri ali IP z ARP zahteve se ujema z njenim</li>
+								<li>Naprava katere IP se ujema, pošlje odgovor z njenim MAC naslovom</li>
+							</ol>
+						</p>
+					</section>
+					<section>
+						<img src="https://www.flackbox.com/wp-content/uploads/2020/07/word-image-5-8.webp" width="auto" height="auto">
+					</section>
+				</section>
+				<section data-background-image="css/slike/hacking_ozadje.jpg" data-background-opacity="0.5">
+					<section>
+						<h3>Kako deluje APR napad</h3>
+						<p>
+							<ul>
+								<li>Man in the middle napad</li>
+								<li>Uporabniku poda svoj IP namesto prejemnikovega</li>
+								<li>Poleg tega, da napadalec posreduje podatke prejemnuku, jim tudi prisluškuje (Wireshark)</li>
+							</ul>
+						</p>
+					</section>
+					<section data-background-image="css/slike/white-background-image.jpg">
+						<img src="https://www.okta.com/sites/default/files/media/image/2021-04/ARPPoisoningSpoofing.png" width="auto" height="auto">
+					</section>
+				</section>
+				<section data-background-image="css/slike/hacking_ozadje.jpg" data-background-opacity="0.5">
+					<h3>Video</h3>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/A7nih6SANYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</section>
+                <section data-background-image="css/slike/hacking_ozadje.jpg" data-background-opacity="0.5">
+					<h3>Viri</h3>
+					<p>
+						<ul>
+							<li><a href="https://cdn.animalhi.com/1920x1080/20180417/5ad5ca682c743.jpg" style="color: #ffff;">https://cdn.animalhi.com/1920x1080/20180417/5ad5ca682c743.jpg</a></li>
+							<li><a href="https://dis-slovarcek.ijs.si/" style="color: #ffff;">https://dis-slovarcek.ijs.si/</a></li>
+							<li><a href="https://www.flackbox.com/arp-the-address-resolution-protocol" style="color: #ffff;">https://www.flackbox.com/arp-the-address-resolution-protocol</a></li>
+						</ul>
+					</p>
+				</section>
+				
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
